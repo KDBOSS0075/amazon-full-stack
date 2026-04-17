@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Video Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            animation: colorShift 5s infinite;
+        }
+        @keyframes colorShift {
+            0% { background-color: #ff0000; }
+            20% { background-color: #ff8000; }
+            40% { background-color: #ffff00; }
+            60% { background-color: #00ff00; }
+            80% { background-color: #0080ff; }
+            100% { background-color: #8000ff; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ECG Video Generator</h1>
+        <input type="file" id="ecgFile" accept=".csv" />
+        <button id="uploadButton">Upload ECG Data</button>
+        <div id="videoContainer">
+            <video id="ecgVideo" controls></video>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
